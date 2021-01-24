@@ -1,5 +1,6 @@
 {
-  "name": "colorz",
+  "name": "color-pickler",
+  "homepage": "https://alexpaxton.github.io/color-pickler",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
