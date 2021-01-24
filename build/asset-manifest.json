@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/color-pickler/static/css/main.ec92ccb7.chunk.css",
+    "main.js": "/color-pickler/static/js/main.b440cb2f.chunk.js",
+    "main.js.map": "/color-pickler/static/js/main.b440cb2f.chunk.js.map",
+    "runtime-main.js": "/color-pickler/static/js/runtime-main.f7906392.js",
+    "runtime-main.js.map": "/color-pickler/static/js/runtime-main.f7906392.js.map",
+    "static/js/2.655bbe1b.chunk.js": "/color-pickler/static/js/2.655bbe1b.chunk.js",
+    "static/js/2.655bbe1b.chunk.js.map": "/color-pickler/static/js/2.655bbe1b.chunk.js.map",
+    "static/js/3.9efb5137.chunk.js": "/color-pickler/static/js/3.9efb5137.chunk.js",
+    "static/js/3.9efb5137.chunk.js.map": "/color-pickler/static/js/3.9efb5137.chunk.js.map",
+    "index.html": "/color-pickler/index.html",
+    "static/css/main.ec92ccb7.chunk.css.map": "/color-pickler/static/css/main.ec92ccb7.chunk.css.map",
+    "static/js/2.655bbe1b.chunk.js.LICENSE.txt": "/color-pickler/static/js/2.655bbe1b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f7906392.js",
+    "static/js/2.655bbe1b.chunk.js",
+    "static/css/main.ec92ccb7.chunk.css",
+    "static/js/main.b440cb2f.chunk.js"
+  ]
+}
