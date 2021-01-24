@@ -4,11 +4,13 @@ import { FC } from "react";
 // Components
 import HueSlider from "../HueSlider";
 import MatrixSlider from "../MatrixSlider";
+import Figures from "../Figures";
 
 const MobileColorPicker: FC = () => {
   return (
     <>
-      <MatrixSlider size={100} />
+      <Figures />
+      <MatrixSlider />
       <HueSlider />
     </>
   );

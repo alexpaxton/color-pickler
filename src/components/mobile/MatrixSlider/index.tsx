@@ -15,11 +15,7 @@ import {
 // Utils
 import { HueToHex } from "utils";
 
-interface MatrixSliderProps {
-  size: number;
-}
-
-const MatrixSlider: FC<MatrixSliderProps> = ({ size }) => {
+const MatrixSlider: FC = () => {
   const {
     hex,
     hsv: { hue, saturation, value },
