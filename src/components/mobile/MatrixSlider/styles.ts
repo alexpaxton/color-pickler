@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const MatrixSliderContainer = styled.div`
   width: 100%;
   flex: 1 0 100px;
-  margin-bottm: 10px;
+  margin-bottom: 10px;
 `;
 
 interface MatrixSliderDragAreaProps {
