@@ -3,8 +3,8 @@ import { hueToPercent } from "../../../utils";
 
 export const HueSliderContainer = styled.div`
   width: 100%;
-  height: 30px;
-  flex: 0 0 30px;
+  height: 44px;
+  flex: 0 0 44px;
 `;
 
 export const HueSliderGradient = styled.div`
