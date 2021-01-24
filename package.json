@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "rm -rf build && yarn run build",
-    "deploy": "gh-pages -d build"
+    "clean": "rm -rf build && rm -rf docs && yarn install",
+    "build-docs": "cp -r build docs"
   },
   "eslintConfig": {
     "extends": [
