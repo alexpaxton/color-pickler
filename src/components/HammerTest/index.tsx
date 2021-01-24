@@ -60,9 +60,9 @@ const HammerTest: FC = () => {
   return (
     <div ref={hammerRef}>
       <Hammer
-        onTap={handleTap}
         direction="DIRECTION_VERTICAL"
         vertical={true}
+        onTap={handleTap}
         onPanStart={handlePanStart}
         onPanEnd={handlePanEnd}
         onPan={handlePan}
