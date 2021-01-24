@@ -32,11 +32,11 @@ interface HueSliderHandleProps {
 export const HueSliderHandle = styled.div<HueSliderHandleProps>`
   position: absolute;
   top: 50%;
-  right: ${(props) => hueToPercent(props.hue)}%;
+  left: ${(props) => hueToPercent(props.hue)}%;
   transform: ${(props) =>
     props.isDragging
-      ? "translate(50%, -50%) scale(2)"
-      : "translate(50%, -50%)"};
+      ? "translate(-50%, -50%) scale(2)"
+      : "translate(-50%, -50%)"};
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -45,5 +45,5 @@ export const HueSliderHandle = styled.div<HueSliderHandleProps>`
   transition: ${(props) =>
     props.isDragging
       ? "transform 0.3s ease"
-      : "transform 0.3s ease, right 0.2s cubic-bezier(0.87, 0, 0.13, 1)"};
+      : "transform 0.3s ease, left 0.2s cubic-bezier(0.87, 0, 0.13, 1)"};
 `;

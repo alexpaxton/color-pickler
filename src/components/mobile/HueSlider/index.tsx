@@ -32,7 +32,7 @@ const HueSlider: FC = () => {
       Math.max(
         Math.min(Math.round((clampedX / width) * HUE_MAX), HUE_MAX),
         HUE_MIN
-      ) - HUE_MAX
+      )
     );
 
     handleChangeHsv({ hue: newHue });
