@@ -1,5 +1,6 @@
 // Libraries
 import { FC, useContext } from "react";
+import chroma from "chroma-js";
 
 // Components
 import { ColorPickerContext } from "../../../utils/ColorPickerProvider";
@@ -16,6 +17,11 @@ import {
 
 const Figures: FC = () => {
   const { hsv, rgb, hex } = useContext(ColorPickerContext);
+
+  const useDarkText = (): boolean => {
+    return chroma.contrast(hex, "#000") >= chroma.contrast(hex, "#fff");
+  };
+
   return (
     <FiguresContainer>
       <FiguresSection>
@@ -32,7 +38,9 @@ const Figures: FC = () => {
           <FiguresValue>{Math.round(hsv.value * 100)}</FiguresValue>
         </FiguresRow>
       </FiguresSection>
-      <FiguresSwatch hex={hex}>{hex}</FiguresSwatch>
+      <FiguresSwatch useDarkText={useDarkText()} hex={hex}>
+        {hex}
+      </FiguresSwatch>
       <FiguresSection>
         <FiguresRow>
           <FiguresLabel>R</FiguresLabel>

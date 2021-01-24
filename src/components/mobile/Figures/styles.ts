@@ -11,6 +11,7 @@ export const FiguresContainer = styled.div`
 
 interface FiguresSwatchProps {
   hex: string;
+  useDarkText?: boolean;
 }
 
 export const FiguresSwatch = styled.div<FiguresSwatchProps>`
@@ -18,10 +19,13 @@ export const FiguresSwatch = styled.div<FiguresSwatchProps>`
   border-radius: 3px;
   margin: 0 4px;
   background-color: ${(props) => props.hex};
+  color: ${(props) => (props.useDarkText ? "#000" : "#fff")};
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
+  overflow: hidden;
+  white-space: nowrap;
   text-transform: uppercase;
   user-select: none;
   font-size: 20px;
@@ -30,7 +34,7 @@ export const FiguresSwatch = styled.div<FiguresSwatchProps>`
 export const FiguresSection = styled.dl`
   border-radius: 3px;
   background-color: #222;
-  flex: 0 0 70px;
+  flex: 0 0 80px;
   padding: 10px;
   display: flex;
   flex-direction: column;
