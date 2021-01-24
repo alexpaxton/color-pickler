@@ -9,6 +9,14 @@ export const SATURATION_MAX = 1;
 export const VALUE_MIN = 0;
 export const VALUE_MAX = 1;
 
+export const clampValue = (v: number): number => {
+  return Math.max(VALUE_MIN, Math.min(v, VALUE_MAX));
+};
+
+export const clampSaturation = (s: number): number => {
+  return Math.max(SATURATION_MIN, Math.min(s, SATURATION_MAX));
+};
+
 export const hueToPercent = (hue: number): number => {
   return (hue / HUE_MAX) * 100;
 };

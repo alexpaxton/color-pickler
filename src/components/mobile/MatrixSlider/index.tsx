@@ -13,7 +13,7 @@ import {
 } from "./styles";
 
 // Utils
-import { HueToHex } from "utils";
+import { HueToHex, clampSaturation, clampValue } from "utils";
 
 const MatrixSlider: FC = () => {
   const {
@@ -24,44 +24,38 @@ const MatrixSlider: FC = () => {
   const matrixRef = useRef<HTMLDivElement>(null);
   const [isDragging, setDragging] = useState<boolean>(false);
 
+  const matrixRect = matrixRef.current?.getBoundingClientRect();
+
   const updatePosition = (eventX: number, eventY: number): void => {
-    if (!matrixRef.current) {
+    if (!matrixRect) {
       return;
     }
 
-    const {
-      left,
-      top,
-      width,
-      height,
-    } = matrixRef.current.getBoundingClientRect();
-    const clampedX = Math.max(0, Math.min(eventX - left, width));
-    const clampedY = Math.max(0, Math.min(eventY - top, height));
+    const { left, top, width, height } = matrixRect;
 
-    const newSaturation = parseFloat((clampedX / width).toFixed(2));
-    const newValue = 1 - parseFloat((clampedY / height).toFixed(2));
+    const panX = eventX - left;
+    const panY = eventY - top;
 
-    handleChangeHsv({ saturation: newSaturation, value: newValue });
+    handleChangeHsv({
+      saturation: clampSaturation(parseFloat((panX / width).toFixed(2))),
+      value: clampValue(1 - parseFloat((panY / height).toFixed(2))),
+    });
   };
 
   const handlePanStart = (e: any): void => {
-    console.log("pan start");
     setDragging(true);
     updatePosition(e.center.x, e.center.y);
   };
 
   const handlePanEnd = (): void => {
-    console.log("pan end");
     setDragging(false);
   };
 
   const handlePan = (e: any): void => {
-    console.log("pan");
     updatePosition(e.center.x, e.center.y);
   };
 
   const handleTap = (e: any): void => {
-    console.log("tap");
     updatePosition(e.center.x, e.center.y);
   };
 
